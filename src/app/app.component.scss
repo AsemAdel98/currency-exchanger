@@ -1,0 +1,8 @@
+.main-container {
+  margin-top: 78px;
+
+  .container-fluid {
+    overflow: auto;
+    height: calc(100vh - 78px);
+  }
+}

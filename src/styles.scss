@@ -1,1 +1,58 @@
 /* You can add global styles to this file, and also import other style files */
+@import "primeicons/primeicons.css";
+@import "assets/styles/primeng-style.scss";
+@import "assets/styles/variables";
+@import "assets/styles/typography.scss";
+@import 'primeflex/primeflex.scss';
+
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+
+html {
+  ::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: var(--First-primary-color);
+  }
+
+  ::-webkit-scrollbar-track {
+    background: var(--Fifth-primary-color);
+  }
+
+  &>* {
+    ::-webkit-scrollbar {
+      width: 5px;
+      height: 10px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: var(--First-primary-color);
+    }
+
+    ::-webkit-scrollbar-track {
+      background: var(--Fifth-primary-color);
+    }
+  }
+}
+
+.container-fluid{
+  max-width: 90vw;
+  margin-right: auto;
+  margin-left: auto;
+  position: relative;
+}

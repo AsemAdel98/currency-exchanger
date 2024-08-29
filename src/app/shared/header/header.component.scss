@@ -1,0 +1,18 @@
+@import "../../../assets/styles/variables.scss";
+
+
+.header-container {
+  width: 100%;
+  top: 0;
+  right: 0;
+  left: 0;
+  position: fixed;
+  z-index: 1000;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.06);
+
+  .header-logo {
+    background: var(--logo) var(--background-center);
+    width: 70px;
+    height: 70px;
+  }
+}
