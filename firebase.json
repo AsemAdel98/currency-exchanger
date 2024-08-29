@@ -1,0 +1,10 @@
+{
+  "hosting": {
+    "public": "\\dist\\currency-exchanger\\browser",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}
