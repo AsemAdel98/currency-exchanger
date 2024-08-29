@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { GlobalFunctionsService } from '../../../../shared/services/global-functions.service';
 
 @Component({
   selector: 'app-currency-details',
@@ -6,5 +7,6 @@ import { Component } from '@angular/core';
   styleUrl: './currency-details.component.scss'
 })
 export class CurrencyDetailsComponent {
+  constructor(public global:GlobalFunctionsService){}
 
 }
