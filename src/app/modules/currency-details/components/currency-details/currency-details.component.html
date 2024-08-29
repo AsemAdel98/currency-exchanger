@@ -1,1 +1,20 @@
-<p>currency-details works!</p>
+@if (global.quickConversionsCurrencies && global.quickConversionsCurrencies.length > 0 && global.toCurrency) {
+<div class="mt-5">
+  <ul class="list-none">
+    <h3>Quick Conversions FROM {{ global.fromCurrency }}</h3>
+    @for (item of global.quickConversionsCurrencies; track $index) {
+    <li >
+      {{ item.amount }} {{ item.from }} = {{ item.fromTo.toFixed(2) }} {{  item.to }}
+    </li>
+  }
+  </ul>
+  <ul>
+    <h3>Quick Conversions FROM {{ global.toCurrency }}</h3>
+    @for (item of global.quickConversionsCurrencies; track $index) {
+      <li class="list-none">
+        {{ item.amount }} {{ item.to }} = {{ item.toFrom.toFixed(2) }} {{ global.toCurrency }}
+      </li>
+    }
+  </ul>
+</div>
+}

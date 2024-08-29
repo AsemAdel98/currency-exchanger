@@ -4,6 +4,7 @@ import { ButtonModule } from 'primeng/button';
 import { MenubarModule } from 'primeng/menubar';
 import { AppRoutingModule } from '../../app-routing.module';
 import { MenuItem } from 'primeng/api';
+import { GlobalFunctionsService } from '../services/global-functions.service';
 
 @Component({
   selector: 'app-header',
@@ -18,10 +19,23 @@ import { MenuItem } from 'primeng/api';
   styleUrl: './header.component.scss'
 })
 export class HeaderComponent {
+  constructor(public global: GlobalFunctionsService) { }
 
   menuSidebar: MenuItem[] = [
-    { route: '', label: 'USD Details' },
-    { route: '', label: 'EUR Details' },
+    {
+      route: '/details', label: 'USD Details', currency: 'USD', command: () => {
+        this.global.toCurrency = '';
+        this.global.amount = 0;
+        this.global.conversionResult = 0
+      }
+    },
+    {
+      route: '/details', label: 'EUR Details', currency: 'EUR', command: () => {
+        this.global.toCurrency = '';
+        this.global.amount = 0;
+        this.global.conversionResult = 0
+      }
+    },
   ];
 
 }
