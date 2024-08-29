@@ -1,1 +1,21 @@
-<p>quick-conversions works!</p>
+@if (conversionResults && global.amount) {
+<div class="mt-5">
+  <h3>Quick Conversions (FROM {{ global.fromCurrency }} TO {{ global.toCurrency }})</h3>
+  <ul class="list-none">
+    @for (item of conversionResults; track $index) {
+    <li >
+      {{ item.amount }} {{ global.fromCurrency }} = {{ item.fromTo.toFixed(2) }} {{  global.toCurrency }}
+    </li>
+  }
+  </ul>
+
+  <h3>Quick Conversions (FROM {{ global.toCurrency }} TO {{ global.fromCurrency }})</h3>
+  <ul>
+    @for (item of conversionResults; track $index) {
+      <li class="list-none">
+        {{ item.amount }} {{ global.toCurrency }} = {{ item.toFrom.toFixed(2) }} {{  global.fromCurrency }}
+      </li>
+    }
+  </ul>
+</div>
+}

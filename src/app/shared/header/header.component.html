@@ -1,1 +1,15 @@
-<p>header works!</p>
+
+<nav class="header-container   py-1">
+  <div class="container-fluid flex justify-content-between align-items-center">
+    <div class="header-logo mr-3"></div>
+    <!-- ------------------ menubar ------------------ -->
+      <p-menubar [model]="menuSidebar" class="menuitem-container w-full" styleClass="p-menubar">
+        <ng-template pTemplate="item" let-item let-root="root">
+          <a pRipple routerLinkActive="active" [routerLinkActiveOptions]="{exact : true}" class="flex align-items-center p-menuitem-link"
+            [routerLink]="[item.route]">
+            <span class="menu-item-label">{{ item.label }}</span>
+          </a>
+        </ng-template>
+      </p-menubar>
+  </div>
+</nav>

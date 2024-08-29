@@ -1,1 +1,17 @@
-<p>converter works!</p>
+<div class="mt-5">
+  <p-inputNumber [(ngModel)]="global.amount" (onInput)="global.fromCurrency || global.toCurrency?global.handleConvert(exchangeRates):''" placeholder="Enter amount" styleClass="mr-3"></p-inputNumber>
+
+  <p-dropdown [options]="currencies" [(ngModel)]="global.fromCurrency" placeholder="From" styleClass="mr-3" [disabled]="!global.amount"></p-dropdown>
+  <p-button [text]="true" (onClick)="swapCurrencies()" styleClass="mr-3" [disabled]="!global.fromCurrency && !global.toCurrency"><span class="material-symbols-outlined">swap_horiz</span></p-button>
+  <p-dropdown [options]="currencies" [(ngModel)]="global.toCurrency" placeholder="To" styleClass="mr-3" [disabled]="!global.amount"></p-dropdown>
+
+
+  <p-button type="button" label="Convert" [disabled]="!global.fromCurrency || !global.toCurrency || !global.amount" (click)="global.handleConvert(exchangeRates)" styleClass="mr-3"/>
+
+
+  <p-button type="button" label="Details" [disabled]="!global.fromCurrency || !global.toCurrency" (click)="redirectToDetails()"/>
+
+  <div *ngIf="global.conversionResult">
+    <h1 class="mt-5">{{ global.amount }} {{ global.fromCurrency }} = {{ global.conversionResult.toFixed(2) }} {{ global.toCurrency }}</h1>
+  </div>
+</div>

@@ -1,0 +1,56 @@
+@import "variables";
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
+
+// Define Typography Styles
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  line-height: 1.5;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+h1 {
+  font-weight: $bold-font-weight;
+  font-size: clamp(1.3125rem, 1.2465rem + 0.2113vw, 1.5rem);
+}
+
+h2 {
+  font-weight: $semi-bold-font-weight;
+  font-size: clamp(1.125rem, 1.059rem + 0.2113vw, 1.3125rem);
+}
+
+h3 {
+  font-weight: $semi-bold-font-weight;
+  font-size: clamp(1rem, 0.956rem + 0.1408vw, 1.125rem);
+  white-space: nowrap;
+}
+
+p {
+  margin: 0;
+  font-size: clamp(0.75rem, 0.706rem + 0.1408vw, 0.875rem);
+  line-height: 1.5;
+  color: var(--primary-text);
+}
+
+.small-text {
+  font-size: $small-font-size;
+  color: var(--muted-text);
+}
+
+.large-text {
+  font-size: $large-font-size;
+  color: var(--primary-text);
+}

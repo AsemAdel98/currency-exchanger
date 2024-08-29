@@ -5,6 +5,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ModulesModule } from './modules/modules.module';
 import { HeaderComponent } from "./shared/header/header.component";
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { GlobalFunctionsService } from './shared/services/global-functions.service';
 
 @NgModule({
   declarations: [
@@ -12,12 +14,14 @@ import { HeaderComponent } from "./shared/header/header.component";
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
     ModulesModule,
     HeaderComponent
-],
+  ],
   providers: [
-    provideClientHydration()
+    GlobalFunctionsService,
+    provideClientHydration(),
   ],
   bootstrap: [AppComponent]
 })

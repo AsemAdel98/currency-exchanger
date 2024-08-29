@@ -1,0 +1,29 @@
+:root {
+  --logo: url(../imgs/currency-exchanger-logo.png);
+
+  --First-primary-color: #EA7C69;
+  --Second-primary-color: #ffffff;
+  --third-primary-color: #000000;
+  --body-color: #252836;
+  --second-body-color:#1F1D2B;
+
+
+  --background-center: no-repeat center/contain;
+}
+
+// ------------------------------------------- fonts
+$LamaSans-regular: "LamaSans-regular";
+$LamaSans-medium: "LamaSans-medium";
+$LamaSans-Bold: "LamaSans-Bold";
+$LamaSans-SemiBold: "LamaSans-SemiBold";
+
+// -------------------------------------------
+
+// Define Font Sizes
+$base-font-size: 16px;
+$small-font-size: 11px;
+$large-font-size: 18px;
+
+// Define Font Weights
+$bold-font-weight: 600;
+$semi-bold-font-weight: 500;
