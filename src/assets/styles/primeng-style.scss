@@ -1,61 +1,5 @@
 @import "variables.scss";
 
-// -------------------custom-p-button
-
-.custom-p-button {
-  background-color: var(--First-primary-color);
-  color: var(--Second-primary-color);
-  border-radius: 13px;
-  transition: background-color 0.3s, transform 0.3s;
-
-  &:hover {
-    background-color: transparent;
-    color: var(--First-primary-color);
-    border: 1px solid var(--First-primary-color);
-    border-radius: 13px;
-  }
-
-  &:focus {
-    box-shadow: 0 0 0 2px #1c2127, 0 0 0 4px rgba(234, 124, 105, 0.7), 0 1px 2px 0 rgba(0, 0, 0, 0);
-  }
-}
-
-.custom-p-button-outline {
-  color: var(--First-primary-color);
-  border: 1px solid var(--First-primary-color);
-  border-radius: 13px;
-  transition: background-color 0.3s, transform 0.3s;
-
-  &:hover {
-    background-color: var(--First-primary-color);
-    color: var(--Second-primary-color);
-    border-radius: 13px;
-  }
-
-  &:focus {
-    box-shadow: 0 0 0 2px #1c2127, 0 0 0 4px rgba(234, 124, 105, 0.7), 0 1px 2px 0 rgba(0, 0, 0, 0);
-  }
-}
-
-.custom-icon-p-button {
-  color: var(--Second-primary-color);
-  transition: background-color 0.3s, transform 0.3s;
-
-  .pi {
-    font-size: 1.5rem;
-  }
-
-  &:focus {
-    box-shadow: 0 0 0 2px #1c2127, 0 0 0 4px rgba(234, 124, 105, 0.7), 0 1px 2px 0 rgba(0, 0, 0, 0);
-  }
-
-  &:active {
-    border: 1px solid var(--First-primary-color);
-  }
-}
-
-
-
 // -------------------navbar-container
 .header-container  {
   .menuitem-container {
@@ -68,29 +12,6 @@
         .item-label {
           color: var(--First-primary-color);
         }
-      }
-    }
-  }
-}
-
-// -------------------item-card-container
-.item-card-container {
-  .p-card {
-    position: relative;
-    background-color: var(--second-body-color);
-    border: 1px solid var(--Second-primary-color);
-    border-radius: 28px;
-    margin-top: 103px;
-
-    .view-button {
-      .p-button {
-        background: var(--Second-primary-color);
-        border: 1px solid var(--Second-primary-color);
-      }
-
-      .p-button:not(:disabled):hover {
-        background: var(--First-primary-color);
-        border-color: var(--First-primary-color);
       }
     }
   }
